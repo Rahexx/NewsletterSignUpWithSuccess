@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -15,41 +13,74 @@
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <!-- Sign-up form start -->
-
-    Stay updated! Join 60,000+ product managers receiving monthly updates on:
-    Product discovery and building what matters Measuring to ensure updates are
-    a success And much more! Email address email@company.com Subscribe to
-    monthly newsletter
-
-    <!-- Sign-up form end -->
-
-    <!-- Success message start -->
-
-    Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message
-
-    <!-- Success message end -->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    <main>
+      <div class="front">
+        <picture class="front__image">
+          <source
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="./assets/images/illustration-sign-up-tablet.svg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt="Sign up illustration"
+          />
+        </picture>
+        <main class="content">
+          <h1 class="content__title">Stay updated!</h1>
+          <p class="content__text">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="content__list list">
+            <li class="list__item">
+              <img class="list__icon" src="./assets/images/icon-list.svg" />
+              Product discovery and building what matters
+            </li>
+            <li class="list__item">
+              <img
+                class="list__icon"
+                src="./assets/images/icon-list.svg"
+              />Measuring to ensure updates are a success
+            </li>
+            <li class="list__item">
+              <img class="list__icon" src="./assets/images/icon-list.svg" />And
+              much more!
+            </li>
+          </ul>
+          <form class="content__form form" action="#" method="post">
+            <label for="email" class="form__label">Email address</label>
+            <span class="form__error">Valid email required</span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form__input"
+              placeholder=""
+            />
+            <button type="submit" class="form__button">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </main>
+      </div>
+      <div class="back">
+        <img
+          class="back__icon"
+          src="./assets/images/icon-success.svg"
+          alt="success icon"
+        />
+        <h1 class="back__title">Thanks for subscribing!</h1>
+        <p class="back__content">
+          A confirmation email has been sent to ash@loremcompany.com. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+        <button class="back__dismissed">Dismiss message</button>
+      </div>
+    </main>
   </body>
 </html>
