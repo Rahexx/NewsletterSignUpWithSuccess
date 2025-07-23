@@ -1,0 +1,19 @@
+.content {
+  margin: 0 $space-24;
+
+  &__title {
+    color: $blue-800;
+    font-size: $text-40;
+    font-weight: $font-bold;
+  }
+
+  &__text {
+    margin: $space-24 0;
+    color: $blue-800;
+    line-height: $line-height-base;
+  }
+
+  &__list {
+    margin-bottom: $space-40;
+  }
+}

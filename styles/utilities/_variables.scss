@@ -1,24 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 // Primary
-$color-red: hsl(4, 100%, 67%);
+$red: hsl(4, 100%, 67%);
 
 // Neutral
-$color-blue-800: hsl(234, 29%, 20%);
-$color-blue-700: hsl(235, 18%, 26%);
-$color-grey: hsl(0, 0%, 58%);
-$color-white: hsl(0, 0%, 100%);
+$blue-800: hsl(234, 29%, 20%);
+$blue-700: hsl(235, 18%, 26%);
+$grey: hsl(0, 0%, 58%);
+$white: hsl(0, 0%, 100%);
 
 /* Typography */
 $font-size-paragraph: 16px;
 
 $font-primary: 'Roboto', sans-serif;
-$font-weight-regular: 400;
-$font-weight-bold: 700;
+$font-regular: 400;
+$font-bold: 700;
 
 $line-height-base: 150%;
 
 $text-12: 0.75rem;
 $text-16: 1rem;
+$text-40: 2.5rem;
 $text-52: 3.25rem;
 
 $space-8: 0.5rem;
