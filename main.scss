@@ -1,1 +1,6 @@
 @import 'styles/base/_reset.scss';
+@import 'styles/utilities/_variables.scss';
+
+.container {
+  font-family: $font-primary;
+}
