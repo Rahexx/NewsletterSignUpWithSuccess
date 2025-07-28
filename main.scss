@@ -12,3 +12,9 @@
   font-family: $font-primary;
   background: $white;
 }
+
+@media (min-width: $breakpoint-tablet) {
+  .container {
+    background: $blue-700;
+  }
+}
