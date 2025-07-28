@@ -1,5 +1,5 @@
 .card {
-  width: 375px;
+  width: 23.4375rem;
   margin: 0 auto;
   overflow: hidden;
   background: $white;
@@ -7,10 +7,10 @@
 
 @media (min-width: $breakpoint-tablet) {
   .card {
-    width: 608px;
-    height: 878px;
+    width: 38rem;
+    height: 54.875rem;
     margin: $space-72 auto;
-    padding: 42.86px $space-40;
+    padding: 2.67875rem $space-40;
     border-radius: 36px;
     box-shadow: 0 16px 60px rgba(0, 0, 0, 0.25);
   }

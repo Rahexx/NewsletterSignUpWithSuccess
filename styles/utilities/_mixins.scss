@@ -1,7 +1,7 @@
 @mixin button-style {
   height: 3.5rem;
-  margin-bottom: $space-40;
   width: 20.4375rem;
+  margin-bottom: $space-40;
   padding: $space-16 $space-47;
   color: $white;
   font-size: $text-16;
@@ -9,4 +9,9 @@
   line-height: $line-height-base;
   background: $blue-800;
   border-radius: 0.5rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 33rem;
+    margin-bottom: 0;
+  }
 }

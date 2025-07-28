@@ -12,3 +12,9 @@
     color: $blue-800;
   }
 }
+
+@media (min-width: $breakpoint-tablet) {
+  .list__item {
+    height: 1.5rem;
+  }
+}

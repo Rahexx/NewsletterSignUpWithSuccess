@@ -17,3 +17,17 @@
     margin-bottom: $space-40;
   }
 }
+
+@media (min-width: $breakpoint-tablet) {
+  .content {
+    margin: 0;
+
+    &__title {
+      font-size: $text-56;
+    }
+
+    &__list {
+      margin-bottom: $space-24;
+    }
+  }
+}

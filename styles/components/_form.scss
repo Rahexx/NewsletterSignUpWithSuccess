@@ -59,15 +59,17 @@
   }
 
   &__button {
-    height: 3.5rem;
-    margin-bottom: $space-40;
-    width: 20.4375rem;
-    padding: $space-16 $space-47;
-    color: $white;
-    font-size: $text-16;
-    font-weight: $font-bold;
-    line-height: $line-height-base;
-    background: $blue-800;
-    border-radius: 0.5rem;
+    @include button-style;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .form {
+    width: 33rem;
+
+    &__input {
+      width: 33rem;
+      margin: $space-8 0 $space-16;
+    }
   }
 }

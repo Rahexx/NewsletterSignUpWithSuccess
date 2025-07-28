@@ -9,3 +9,9 @@
     display: none;
   }
 }
+
+@media (min-width: $breakpoint-tablet) {
+  .front {
+    align-items: start;
+  }
+}
