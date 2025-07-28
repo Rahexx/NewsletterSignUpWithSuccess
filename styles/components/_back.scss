@@ -27,3 +27,18 @@
     @include button-style;
   }
 }
+
+@media (min-width: $breakpoint-tablet) {
+  .back {
+    margin: $space-60 $space-64;
+
+    &__title {
+      margin: $space-32 0;
+      font-size: $text-56;
+    }
+
+    &__content {
+      margin-bottom: $space-32;
+    }
+  }
+}
