@@ -31,3 +31,17 @@
     }
   }
 }
+
+@media (min-width: $breakpoint-desktop) {
+  .content {
+    margin: 0;
+
+    &__text {
+      margin: $space-32 0;
+    }
+
+    &__list {
+      margin-bottom: $space-32;
+    }
+  }
+}

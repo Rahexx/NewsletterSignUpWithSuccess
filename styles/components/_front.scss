@@ -16,3 +16,13 @@
     align-items: start;
   }
 }
+
+@media (min-width: $breakpoint-desktop) {
+  .front {
+    padding: $space-24 $space-32;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: $space-64;
+  }
+}
