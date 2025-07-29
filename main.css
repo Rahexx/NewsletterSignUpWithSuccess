@@ -1,0 +1,430 @@
+/* Reset styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove default button styles */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Remove tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+/* Typography */
+.card {
+  width: 23.4375rem;
+  margin: 0 auto;
+  overflow: hidden;
+  background: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 768px) {
+  .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 38rem;
+    margin: 0;
+    border-radius: 36px;
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.25);
+    transform: translate(-50%, -50%);
+  }
+  .card:has(.front--hide) {
+    width: 31.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .card {
+    height: 40.0625rem;
+    width: 56.5rem;
+  }
+  .card:has(.front--hide) {
+    height: 32.5rem;
+    width: 31.5rem;
+  }
+}
+.back {
+  margin: 9.3125rem 1.5rem 4.5rem;
+}
+.back--hide {
+  display: none;
+}
+.back__title {
+  margin: 2rem 0;
+  color: hsl(234, 29%, 20%);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.back__content {
+  margin-bottom: 16.4375rem;
+  color: hsl(234, 29%, 20%);
+  line-height: 150%;
+  font-size: 1rem;
+}
+.back__content--bold {
+  font-weight: 700;
+}
+.back__dismissed {
+  height: 3.5rem;
+  width: 20.4375rem;
+  margin-bottom: 2.5rem;
+  padding: 1rem 2.9375rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  background: linear-gradient(to right, hsl(234, 29%, 20%), hsl(234, 29%, 21%));
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.back__dismissed:hover {
+  background: linear-gradient(to right, #ff6a3a 0%, #ff527b 100%);
+}
+@media (min-width: 768px) {
+  .back__dismissed {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .back {
+    margin: 3.75rem 4rem;
+  }
+  .back__title {
+    margin: 2rem 0;
+    font-size: 3.5rem;
+  }
+  .back__content {
+    margin-bottom: 2rem;
+  }
+}
+.front {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+.front--hide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .front {
+    padding: 2.67875rem 2.5rem;
+    align-items: start;
+  }
+}
+@media (min-width: 1200px) {
+  .front {
+    padding: 1.5rem 2rem;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+.content {
+  margin: 0 1.5rem;
+}
+.content__title {
+  color: hsl(234, 29%, 20%);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.content__text {
+  margin: 1.5rem 0;
+  color: hsl(234, 29%, 20%);
+  line-height: 150%;
+}
+.content__list {
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+    margin: 0;
+  }
+  .content__title {
+    font-size: 3.5rem;
+  }
+  .content__list {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .content {
+    margin: 0;
+  }
+  .content__text {
+    margin: 2rem 0;
+  }
+  .content__list {
+    margin-bottom: 2rem;
+  }
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.list__item {
+  height: 3rem;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  line-height: 150%;
+  color: hsl(234, 29%, 20%);
+}
+
+@media (min-width: 768px) {
+  .list__item {
+    height: 1.5rem;
+  }
+}
+.form {
+  position: relative;
+  width: 20.4375rem;
+  display: flex;
+  flex-direction: column;
+}
+.form--error .form__error {
+  visibility: visible;
+}
+.form--error .form__input {
+  border: 1px solid hsl(4, 100%, 67%);
+  color: hsl(4, 100%, 67%);
+  background: hsl(2, 100%, 95%);
+}
+.form--error .form__input:focus {
+  outline: 1px solid hsl(4, 100%, 67%);
+}
+.form__label, .form__error {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 150%;
+}
+.form__label {
+  color: hsl(234, 29%, 20%);
+}
+.form__error {
+  top: 0;
+  right: 0;
+  position: absolute;
+  color: hsl(4, 100%, 67%);
+  visibility: hidden;
+}
+.form__input {
+  height: 3.5rem;
+  width: 20.4375rem;
+  margin: 0.5rem 0 1.5rem;
+  padding-left: 1.5rem;
+  border: 1px solid hsl(0, 0%, 58%);
+  color: hsl(234, 29%, 20%);
+  font-size: 1rem;
+  line-height: 150%;
+  border-radius: 0.5rem;
+}
+.form__input::placeholder {
+  color: hsl(0, 0%, 58%);
+}
+.form__input:focus {
+  outline: 1px solid hsl(234, 29%, 20%);
+}
+.form__button {
+  height: 3.5rem;
+  width: 20.4375rem;
+  margin-bottom: 2.5rem;
+  padding: 1rem 2.9375rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  background: linear-gradient(to right, hsl(234, 29%, 20%), hsl(234, 29%, 21%));
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.form__button:hover {
+  background: linear-gradient(to right, #ff6a3a 0%, #ff527b 100%);
+}
+@media (min-width: 768px) {
+  .form__button {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .form {
+    width: 33rem;
+  }
+  .form__input {
+    width: 33rem;
+    margin: 0.5rem 0 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .form {
+    width: 100%;
+  }
+  .form__input {
+    width: 100%;
+  }
+}
+.container {
+  font-family: "Roboto", sans-serif;
+  background: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 768px) {
+  .container {
+    background: hsl(235, 18%, 26%);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

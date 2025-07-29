@@ -1,0 +1,44 @@
+.back {
+  margin: $space-149 $space-24 $space-72;
+
+  &--hide {
+    display: none;
+  }
+
+  &__title {
+    margin: $space-32 0;
+    color: $blue-800;
+    font-size: $text-40;
+    font-weight: $font-bold;
+  }
+
+  &__content {
+    margin-bottom: $space-263;
+    color: $blue-800;
+    line-height: $line-height-base;
+    font-size: $text-16;
+
+    &--bold {
+      font-weight: $font-bold;
+    }
+  }
+
+  &__dismissed {
+    @include button-style;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .back {
+    margin: $space-60 $space-64;
+
+    &__title {
+      margin: $space-32 0;
+      font-size: $text-56;
+    }
+
+    &__content {
+      margin-bottom: $space-32;
+    }
+  }
+}

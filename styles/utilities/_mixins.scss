@@ -1,0 +1,22 @@
+@mixin button-style {
+  height: 3.5rem;
+  width: 20.4375rem;
+  margin-bottom: $space-40;
+  padding: $space-16 $space-47;
+  color: $white;
+  font-size: $text-16;
+  font-weight: $font-bold;
+  line-height: $line-height-base;
+  background: linear-gradient(to right, $blue-800, lighten($blue-800, 1%));
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(to right, #ff6a3a 0%, #ff527b 100%);
+  }
+
+  @media (min-width: $breakpoint-tablet) {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}

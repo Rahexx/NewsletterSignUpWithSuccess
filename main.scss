@@ -1,0 +1,20 @@
+@import 'styles/base/_reset.scss';
+@import 'styles/utilities/_variables.scss';
+@import 'styles/utilities/_mixins.scss';
+@import 'styles/components/_card.scss';
+@import 'styles/components/_back.scss';
+@import 'styles/components/_front.scss';
+@import 'styles/components/_content.scss';
+@import 'styles/components/_list.scss';
+@import 'styles/components/_form.scss';
+
+.container {
+  font-family: $font-primary;
+  background: $white;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .container {
+    background: $blue-700;
+  }
+}
