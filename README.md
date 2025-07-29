@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Rahexx/NewsletterSignUpWithSuccess)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://rahexx.github.io/NewsletterSignUpWithSuccess/)
 
 ## My process
 
