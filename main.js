@@ -1,5 +1,6 @@
-c
-onst form = document.querySelector('.form');
+const front = document.querySelector('.front');
+const back = document.querySelector('.back');
+const form = document.querySelector('.form');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -11,6 +12,10 @@ form.addEventListener('submit', (event) => {
   if (!strictEmail.test(emailInput.value)) {
     form.classList.add('form--error');
   } else {
+    const emailToShow = back.querySelector('.back__content--bold');
     form.classList.remove('form--error');
+    front.classList.add('front--hide');
+    back.classList.remove('back--hide');
+    emailToShow.textContent = emailInput.value;
   }
 });
