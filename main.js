@@ -1,15 +1,22 @@
 const front = document.querySelector('.front');
 const back = document.querySelector('.back');
-const form = document.querySelector('.form');
+const form = front.querySelector('.form');
 const emailToShow = back.querySelector('.back__content--bold');
 const dissmissedButton = back.querySelector('.back__dismissed');
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+const strictEmail =
+  /^(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:\\[\x00-\x7F]|[^\\"])*")@(?:(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,})$/;
+
+function resetModal() {
+  front.classList.remove('front--hide');
+  back.classList.add('back--hide');
+  form.reset();
+}
+
+function handleSubmitForm(e) {
+  e.preventDefault();
 
   const emailInput = form.querySelector('.form__input');
-  const strictEmail =
-    /^(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:\\[\x00-\x7F]|[^\\"])*")@(?:(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,})$/;
 
   if (!strictEmail.test(emailInput.value)) {
     form.classList.add('form--error');
@@ -19,10 +26,7 @@ form.addEventListener('submit', (event) => {
     back.classList.remove('back--hide');
     emailToShow.textContent = emailInput.value;
   }
-});
+}
 
-dissmissedButton.addEventListener('click', () => {
-  front.classList.remove('front--hide');
-  back.classList.add('back--hide');
-  form.reset();
-});
+form.addEventListener('submit', handleSubmitForm);
+dissmissedButton.addEventListener('click', resetModal);
